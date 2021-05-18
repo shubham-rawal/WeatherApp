@@ -1,4 +1,5 @@
 import 'package:geolocator/geolocator.dart';
+import 'package:geolocator_web/geolocator_web.dart';
 
 class Location {
   double latitude;
