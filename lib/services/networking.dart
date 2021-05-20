@@ -1,18 +1,21 @@
+import 'package:clima/services/weather.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'package:clima/services/location.dart';
 
 class NetworkHelper {
-  NetworkHelper(this.authority, this.encodedUrl, this.queries);
-  final String authority;
-  final String encodedUrl;
-  final Map queries;
-
-  Future getData() async {
-    http.Response response =
-        await http.get(Uri.https(authority, encodedUrl, queries));
+  NetworkHelper(this.urlOfApi);
+  final String urlOfApi;
+  Future getData(double latitude, double longitude) async {
+    print("Weather data");
+    var url = Uri.parse(
+        '$urlOfApi?lat=$latitude&lon=$longitude&appid=$apiKey&units=metric');
+    print(url);
+    http.Response response = await http.get(url);
+    print(response);
     if (response.statusCode == 200) {
       String data = response.body;
-
+      print('console was here');
       return jsonDecode(data);
     } else {
       print(response.statusCode);

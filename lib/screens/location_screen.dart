@@ -28,10 +28,11 @@ class _LocationScreenState extends State<LocationScreen> {
         weatherIcon = 'Error';
         message = 'Unable to fetch weather';
         cityName = '';
+        return;
       }
-      double temp = weatherData['main'].temp;
+      double temp = weatherData['main']['temp'];
       temperature = temp.toInt();
-      var condition = weatherData['weather'][0].id;
+      var condition = weatherData['weather'][0]['id'];
       weatherIcon = weather.getWeatherIcon(condition);
       message = weather.getMessage(temperature);
       cityName = weatherData['name'];
