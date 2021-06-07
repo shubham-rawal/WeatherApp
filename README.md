@@ -29,10 +29,6 @@ I have made a  weather app inspired by the beautiful designs made by [Olia Gozha
 
 - Enhancing the UI of the app to make it look more visually appealing and user friendly.
 - Also encoporating a much wider weather description that includes humidity, all-day-forecast, precipitation, and also weekly weather forecasts.
-- To include drop-down suggestions for city names as the user types along in the search bar, to avoid spelling errors and also helping the user chose the desired city.
-- Inclusion of charts and line graphs, to depict the current weather in a way that's visually more appealing and fun.
-- Try to learn and implement app notifications on a user's device that notifies the user whenever they need to carry an umbrella or when it's windy or sunny.
-
->Note: These are just future ideas that may be worked upon, as I learn more and grow as a developer. Although, the app is completely functional now, these ideas would enhance the app's usability and purpose.
+- To include drop-down suggestions for city names as the user types along in the search bar, which may be implemented using Google Places API.
 
 >This is a companion project to The App Brewery's Complete Flutter Development Bootcamp, check out the full course at [www.appbrewery.co](https://www.appbrewery.co/)
